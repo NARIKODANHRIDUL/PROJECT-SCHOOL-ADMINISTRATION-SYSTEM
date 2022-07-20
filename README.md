@@ -9,7 +9,7 @@ The project was developed with the sum of solving the problem of maintaining the
 
 ## EXISTING SYSTEM :
 The details of students are manually entered into the booklet
-##### Limitations of current system:
+#### Limitations of current system:
  	 - Consumes much space and time.
  	 - Accuracy is less.
  	 - Involves implicated manual labor.
@@ -19,7 +19,7 @@ The details of students are manually entered into the booklet
 
 ## PROPOSED SYSTEM 
 In the proposed system we are developing new software carefully. Studying the existing system, customer details can be added, modified, deleted and viewed can be done easily since the program is menu driven.
-##### Advantages of then current system:
+#### Advantages of then current system:
  	 - Can add student details easily
  	 - Can view admission no, name, age, sex, phone number, place.
  	 - Can add or delete student record.
@@ -30,33 +30,33 @@ In the proposed system we are developing new software carefully. Studying the ex
 ---
 
 ## SYSTEM DESIGN
-#### SYSTEM DEFITION:
+### SYSTEM DEFITION:
 A system can be defined as a network of interrelated procedure that are joined together to perform an activity or to accomplish a specific objective. It is in effect all ingredients that make up the whole.
 
-#### CLASS DEFINITION:
+### CLASS DEFINITION:
 Class is used to bind data members and member functions together. It provides data security. It is a user defined data type. Class used in program is ‘OSWAL’ and the object is ‘b’.
 
-#### DATA MEMBERS:
+### DATA MEMBERS:
     - admno : stores admission no
     - name: stores name of the student
     - age   : stores age of the student
     - sex: stores phone no of the student
     - phone : stores phone no of the student
 
-#### MEMBER FUNCTIONS:
+### MEMBER FUNCTIONS:
     - Void enter(): to enter student details
     - Void display(): to display student details
     - int retadmno(): return student admission no
     - int last_member():return student admission no of last student
     - Void modify_data():modify the existing student details
 
-#### FILE DEFINITION:
+### FILE DEFINITION:
 A file is a collection of logically related information. It is also a means to store data, having an appreciably large storage space. This is done so because data base of this programs are too large, that can’t be stored in a large memory 
 
-#### FILES:
+### FILES:
 File used to store student details are student.dat and temp.dat (for deletion menu).
 
-#### STREAM OBJECTS:
+### STREAM OBJECTS:
 The stream objects used for ‘read’ and ‘write’ are f, f2 and file.
 
 ---
@@ -352,7 +352,7 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 				 break;
 		case '6':screen1();
 				 break;
-		default:cout<<"So Sorry!!!Unknown Choice\n TRY AGAIN....";
+		default:cout<<"So Sorry!!!Unknown Choice\n TRY AGAIN....";
   }
 }
 									void add_data()
