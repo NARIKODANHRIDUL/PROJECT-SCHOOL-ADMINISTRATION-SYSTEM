@@ -5,6 +5,8 @@
 The project titled “SCHOOL ADMINISTRATION SYSTEM” intends to develop a tool that could definitely improve the huge amount of data processing. This project has been developed using C++ which is an object-oriented program.
 The project was developed with the sum of solving the problem of maintaining the number of files and easy data retrieval according to the need. The main function performed by this tool include entry function, edit function, search function and display function and also to enter then details of the students. The tool has a friendly inter face and environment that makes adding, deleting and modifying of customer details easy. Its aim is faster data access. It is also user friendly and systematic. 
 
+---
+
 ## EXISTING SYSTEM :
 The details of students are manually entered into the booklet
 ##### Limitations of current system:
@@ -12,6 +14,8 @@ The details of students are manually entered into the booklet
  	 - Accuracy is less.
  	 - Involves implicated manual labor.
  	 - Difficult to make changes. 
+
+---
 
 ## PROPOSED SYSTEM 
 In the proposed system we are developing new software carefully. Studying the existing system, customer details can be added, modified, deleted and viewed can be done easily since the program is menu driven.
@@ -23,26 +27,28 @@ In the proposed system we are developing new software carefully. Studying the ex
  	 - User friendly.
  	 - Stores details of students.
 
+---
+
 ## SYSTEM DESIGN
 #### SYSTEM DEFITION:
-      A system can be defined as a network of interrelated procedure that are joined together to perform an activity or to accomplish a specific objective. It is in effect all ingredients that make up the whole.
+A system can be defined as a network of interrelated procedure that are joined together to perform an activity or to accomplish a specific objective. It is in effect all ingredients that make up the whole.
 
 #### CLASS DEFINITION:
-    Class is used to bind data members and member functions together. It provides data security. It is a user defined data type. Class used in program is ‘OSWAL’ and the object is ‘b’.
+Class is used to bind data members and member functions together. It provides data security. It is a user defined data type. Class used in program is ‘OSWAL’ and the object is ‘b’.
 
 #### DATA MEMBERS:
- 	admno : stores admission no
- 	name: stores name of the student
- 	age   : stores age of the student
- 	sex: stores phone no of the student
- 	 phone : stores phone no of the student
+    - admno : stores admission no
+    - name: stores name of the student
+    - age   : stores age of the student
+    - sex: stores phone no of the student
+    - phone : stores phone no of the student
 
 #### MEMBER FUNCTIONS:
- 	 Void enter(): to enter student details
- 	 Void display(): to display student details
- 	 int retadmno(): return student admission no
- 	 int last_member():return student admission no of last student
- 	 Void modify_data():modify the existing student details
+    - Void enter(): to enter student details
+    - Void display(): to display student details
+    - int retadmno(): return student admission no
+    - int last_member():return student admission no of last student
+    - Void modify_data():modify the existing student details
 
 #### FILE DEFINITION:
 A file is a collection of logically related information. It is also a means to store data, having an appreciably large storage space. This is done so because data base of this programs are too large, that can’t be stored in a large memory 
@@ -51,8 +57,11 @@ A file is a collection of logically related information. It is also a means to s
 File used to store student details are student.dat and temp.dat (for deletion menu).
 
 #### STREAM OBJECTS:
- The stream objects used for ‘read’ and ‘write’ are f, f2 and file.
+The stream objects used for ‘read’ and ‘write’ are f, f2 and file.
 
+---
+
+## SOURCE CODE
 ```
 #include<iostream>
 #include<fstream>
