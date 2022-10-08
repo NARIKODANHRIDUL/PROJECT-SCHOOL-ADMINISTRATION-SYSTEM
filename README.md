@@ -9,7 +9,7 @@ The project was developed with the sum of solving the problem of maintaining the
 
 ## EXISTING SYSTEM :
 The details of students are manually entered into the booklet
-#### Limitations of current system:
+##### Limitations of current system:
  	 - Consumes much space and time.
  	 - Accuracy is less.
  	 - Involves implicated manual labor.
@@ -19,7 +19,7 @@ The details of students are manually entered into the booklet
 
 ## PROPOSED SYSTEM 
 In the proposed system we are developing new software carefully. Studying the existing system, customer details can be added, modified, deleted and viewed can be done easily since the program is menu driven.
-#### Advantages of then current system:
+##### Advantages of then current system:
  	 - Can add student details easily
  	 - Can view admission no, name, age, sex, phone number, place.
  	 - Can add or delete student record.
@@ -30,33 +30,33 @@ In the proposed system we are developing new software carefully. Studying the ex
 ---
 
 ## SYSTEM DESIGN
-### SYSTEM DEFITION:
+#### SYSTEM DEFITION:
 A system can be defined as a network of interrelated procedure that are joined together to perform an activity or to accomplish a specific objective. It is in effect all ingredients that make up the whole.
 
-### CLASS DEFINITION:
+#### CLASS DEFINITION:
 Class is used to bind data members and member functions together. It provides data security. It is a user defined data type. Class used in program is ‘OSWAL’ and the object is ‘b’.
 
-### DATA MEMBERS:
+#### DATA MEMBERS:
     - admno : stores admission no
     - name: stores name of the student
     - age   : stores age of the student
     - sex: stores phone no of the student
     - phone : stores phone no of the student
 
-### MEMBER FUNCTIONS:
+#### MEMBER FUNCTIONS:
     - Void enter(): to enter student details
     - Void display(): to display student details
     - int retadmno(): return student admission no
     - int last_member():return student admission no of last student
     - Void modify_data():modify the existing student details
 
-### FILE DEFINITION:
+#### FILE DEFINITION:
 A file is a collection of logically related information. It is also a means to store data, having an appreciably large storage space. This is done so because data base of this programs are too large, that can’t be stored in a large memory 
 
-### FILES:
+#### FILES:
 File used to store student details are student.dat and temp.dat (for deletion menu).
 
-### STREAM OBJECTS:
+#### STREAM OBJECTS:
 The stream objects used for ‘read’ and ‘write’ are f, f2 and file.
 
 ---
@@ -73,10 +73,10 @@ The stream objects used for ‘read’ and ‘write’ are f, f2 and file.
 using namespace std;
 #include "windows.h"
 
-void gotoxy(int x, int y) 
-{ 
+void gotoxy(int x, int y)
+{
     COORD coord;
-    coord.X = x; 
+    coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
@@ -99,7 +99,7 @@ int count();
 
 int main(int argc, char **argv)
 {
-	// system("cls");  
+	// system("cls");
 //  clrscr();
  	screen1();
 	 return 0;
@@ -148,14 +148,14 @@ class student
   cout<<"ENTER AGE      :                       (enter  1  to retain old one)\n";
   cout<<"ENTER SEX      :                       (enter  .  to retain old one)\n";
   cout<<"ENTER PHONE NO :                       (enter  .  to retain old one)\n";
+		gotoxy(17,16);
+		cin>>nm;
 		gotoxy(17,17);
-		gets(nm);
-		gotoxy(17,18);
 		cin>>ag;
+		gotoxy(17,18);
+		cin>>sx;
 		gotoxy(17,19);
-		gets(sx);
-		gotoxy(17,20);
-		gets(ph);
+		cin>>ph;
 		if(strcmp(nm,".")!=0)
 		strcpy(name,nm);
 		if(ag!=1)
@@ -168,10 +168,10 @@ class student
 		gotoxy(25,25);
 		cout<<"press any key to go back!!!!!!!!";
 		}
-		
+
 		void student::enter()
 		{
-			system("cls");  
+			system("cls");
 		// clrscr();
 		sc();
 		cout<<"\n\n                           STUDENT REGISTRATION           \n";
@@ -180,22 +180,23 @@ class student
 		admno=last_member();
 		admno++;
 		cout<<"\n\n\t Enter name \t             :                      (press ! to go back)";
-		gotoxy(39,10);
-		gets(name);
+		gotoxy(39,9);
+
+cin>>name;
 		if(strcmp(name,"!")==0)
 		{
 		return;
 		}
-		cout<<"\t Enter Age                   :";
+		cout<<"\t Enter Age                   : ";
 		cin>>age;
-		cout<<"\t Enter sex                   :";
-		gets(sex);
-		cout<<"\t Enter phone number          :";
-		gets(phone);
+		cout<<"\t Enter sex                   : ";
+		cin>>sex;
+		cout<<"\t Enter phone number          : ";
+		cin>>phone;
 		// cout<<"\n Thank you for registering.....(:";
 		cout<<"\n\n\t\tYour admission no is "<<admno;
-			
-		
+
+
 		}
 
 		 void student::display()
@@ -222,7 +223,7 @@ class student
 							void screen1()
 {
 	start:
-	system("cls");  
+	system("cls");
 	// clrscr();
 	char ch;
 	sc();
@@ -230,12 +231,12 @@ class student
 	cout<<"\t\t[A].ADMINISTRATOR\n";
 	cout<<"\n";
 	cout<<"\t\t[E].EXIT\n\n";
-	cout<<"SELECT YOUR OPTION:";
+	cout<<"SELECT YOUR OPTION: ";
 	cin>>ch;
 	switch(ch)
 	{
 		case 'A':
-		case 'a':system("cls");  
+		case 'a':system("cls");
 					// clrscr();
 					pass();
 					adm:
@@ -259,31 +260,34 @@ class student
 	cout<<"USER NAME:";
 	gotoxy(30,13);
 	cout<<"PIN      :";
-	gotoxy(40,12);
-	gets(user);
+	gotoxy(41,12);
+	cin>>user;
 	cout<<"\n\n";
-	gotoxy(40,13);
+	gotoxy(41,13);
 	for(int i=0;i<8;i++)
 	{
 		c[i]=getch();
 		cout<<"*";
 	}
-	c[0]='\0';
-	cout<<"\n";
+	c[8]='\0';
+	getch();
+
 if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"password")==0))
-	{system("cls");  
+	{system("cls");
 		// clrscr();
 		sc();
 		gotoxy(37,13);
+
 		cout<<"WELCOME";
 		for(x=0;x<1;x++);
 	}
 	else if((strcmp(user,"narikul")!=0)&&(strcmp(user,"NARIKUL")!=0))
 	{
-		system("cls");  
+		system("cls");
 		// clrscr();
 		sc();
 		gotoxy(25,13);
+
 		cout<<"Oops!!! ADMINISTRATION NOT RESPONDING\n\t\t\t (user name is wrong!!!!!)";
 		getch();
 		screen1();
@@ -291,11 +295,12 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 	}
 	else if(strcmp(c,"password")!=0)
 	{
-		system("cls");  
+		system("cls");
 			// clrscr();
 		sc();
 		gotoxy(25,13);
-		cout<<"Oops !!! ADMINISTRATION NOT RESPONDING\n\t\t\t (password is wrong!!!!!)";
+
+		cout<<"Oops!!! ADMINISTRATION NOT RESPONDING\n\t\t\t (password is wrong!!!!!)";
 		getch();
 		screen1();
 	}
@@ -309,7 +314,7 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 									void adscreen()
 {
 	char ch;
-	system("cls");  
+	system("cls");
 	// clrscr();
 	sc();
 	cout<<"\n\t[1] STUDENT REGISTRATION      \n\n";
@@ -318,7 +323,7 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 	cout<<"\t[4] MODIFY A STUDENT'S DETAILS        \n\n ";
 	cout<<"\t[5] DELETE A STUDENT'S DETAILS         \n\n";
 	cout<<"\t[6] Back                    \n\n";
-	cout<<"\n\t\t## Enter your choice :";
+	cout<<"\n\t\t## Enter your choice : ";
 	cin>>ch;
 	adm(ch);
 	getch();
@@ -326,13 +331,19 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 
 									void exi()
 {
-	system("cls");  
+	system("cls");
 	// clrscr();
 	sc();
 	cout<<"\n\n THANKS FOR USING :).............\n";
-	cout<<"\n\n      Developed by # NARIKODAN HRIDUL\n";
-	cout<<"                   # AKUL SHINE\n";
-	cout<<"\n\n *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*";
+	cout<<"\n\nDeveloped by NARIKODAN HRIDUL\n\n";
+	cout<<"    	  ____      ___     ___     ___         ___         ____\n";
+	cout<<"   	 /    \\    /   \\   /   \\   |   \\       |   \\  \\  / |        |  |  |\n";
+	cout<<"   	|         |     | |     |  |    \\      |___/   \\/  |___     |  |  |\n";
+	cout<<"	|     _   |     | |     |  |    /      |   \\   /   |        |  |  |\n";
+	cout<<"	 \\___/ |   \\___/   \\___/   |___/       |___/  /    |____    o  o  o\n";
+
+    cout<<"\n\n                              \\(=_= ) (=_=)/\n";
+	cout<<"\n           *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  *_*  \n\n";
 	exit(0);
 }
 									void adm(int ch)
@@ -352,7 +363,7 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 				 break;
 		case '6':screen1();
 				 break;
-		default:cout<<"So Sorry!!!Unknown Choice\n TRY AGAIN....";
+		default:cout<<"So Sorry!!!Unknown Choice\n TRY AGAIN....";
   }
 }
 									void add_data()
@@ -366,7 +377,7 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 }
 									void viewall()
 {
-	system("cls");  
+	system("cls");
 	// clrscr();
 	sc();
 	cout<<"\n	-=SCHOOL REGISTER=-           \n";
@@ -388,19 +399,19 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 								void searchadmno()
 {
   int n;
-  system("cls");  
+  system("cls");
 //   clrscr();
   sc();
   int flag=0;
   gotoxy(20,13);
-  cout<<"## Enter the student admission no to search:";
+  cout<<"## Enter the student admission no to search: ";
   cin>>n;
   f.open("student.dat",ios::in);
   while(f.read((char*)&a,sizeof(student)))
   {
 		if(a.retadmno()==n)
 		{
-			system("cls");  
+			system("cls");
 			// clrscr();
 			sc();
 			a.display();
@@ -410,11 +421,11 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
   f.close();
   if(flag==0)
   {
-	system("cls");  
+	system("cls");
 		// clrscr();
 		sc();
 		gotoxy(28,13);
-		cout<<"Oops !!Record not found!!";
+		cout<<"Oops!!Record not found!!";
 		gotoxy(25,20);
 		cout<<"press any key to go back!!!!!!!";
   }
@@ -437,7 +448,7 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 }
 					int disp(int bl)
 {
-	system("cls");  
+	system("cls");
 //   clrscr();
   sc();
   int flag=1;
@@ -453,11 +464,11 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
   f.close();
   if(flag==1)
   {
-	system("cls");  
+	system("cls");
 		// clrscr();
 		sc();
 		gotoxy(28,13);
-		cout<<"Oops !!Record not found!!";
+		cout<<"Oops!!Record not found!!";
 		gotoxy(25,20);
 		cout<<"press any key to go back!!!!!!!";
   }
@@ -465,14 +476,14 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 }
 void modify()
 {
-	system("cls");  
+	system("cls");
 	// clrscr();
 	sc();
 	int bl,t;
 	char ch;
 	long pos;
 	gotoxy(20,13);
-	cout<<"## Please Enter the admission no to be modified:";
+	cout<<"## Please Enter the admission no to be modified: ";
 	cin>>bl;
 	t=disp(bl);
 	if(t==0)
@@ -507,17 +518,17 @@ void modify()
 {
  int no,t;
  char ch;
- system("cls");  
+ system("cls");
 //  clrscr();
  sc();
  gotoxy(22,13);
- cout<<"## Enter the admission no to delete:";
+ cout<<"## Enter the admission no to delete: ";
  cin>>no;
  t=disp(no);
  if(t==0)
  {
 	gotoxy(21,18);
-    cout<<"DO YOU WANT TO DELETE IT ? (Y/N) :";
+    cout<<"DO YOU WANT TO DELETE IT ? (Y/N) : ";
 	cin>>ch;
 	if(ch=='y'||ch=='Y')
 	{
@@ -537,7 +548,7 @@ void modify()
 		remove("student.dat");
 		rename("tem.dat","student.dat");
 		// clrscr();
-		system("cls");  
+		system("cls");
 		sc();
 		gotoxy(27,13);
 		cout<<"Record Deleted Successfully";
@@ -551,4 +562,23 @@ else
   }
  }
 }
+
 ```
+
+
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/1-1.png)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/2-anushadded.png)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/3-2.png)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/4-searched%20anush.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/5-3.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/6-seach1005.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/8-4.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/9-modify1005.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/10-anushmodified.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/11-5.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/12-delete1005.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/13-delete%20anush.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/14-deleted%20anush%20successfully.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/15-6.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/16-backed.PNG)
+![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/17-exit.PNG)
