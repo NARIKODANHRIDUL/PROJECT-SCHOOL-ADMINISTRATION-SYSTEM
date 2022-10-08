@@ -11,6 +11,8 @@ The project was developed with the sum of solving the problem of maintaining the
 <video controls autoplay muted loop src="https://raw.githubusercontent.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/master/demoVideo.mp4">
 Your browser doesn't support this file format :) </video>
 
+[![Watch the video](https://pngimg.com/uploads/google_drive/google_drive_PNG7.png)](https://drive.google.com/file/d/1AI9xGLYmpNXRHcsP7be54WkAvq49Y5Io/view?usp=sharing)
+
 ---
 
 ## EXISTING SYSTEM :
