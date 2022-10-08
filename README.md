@@ -8,7 +8,7 @@ The project was developed with the sum of solving the problem of maintaining the
 ---
 
 ## DEMO VIDEO
-<video controls autoplay muted loop src="https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/demoVideo.mp4">
+<video controls autoplay muted loop src="https://raw.githubusercontent.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/master/demoVideo.mp4">
 Your browser doesn't support this file format :) </video>
 
 ---
