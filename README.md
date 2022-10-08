@@ -80,17 +80,17 @@ void gotoxy(int x, int y)
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
-void add_data();
-void viewall();
-void searchadmno();
-void delete_();
-void modify();
+void add_data();        //adding user
+void viewall();         //show all entries
+void searchadmno();     //searching given roll number
+void delete_();         //deleting given roll number
+void modify();          //modifying given roll number
 void details();
-void sc();
+void sc();              //banner used in every page
 int disp(int bl);
-void screen1();
-void pass();
-void adscreen();
+void screen1();         //screen with admin and exit
+void pass();            //admin login screen
+void adscreen();        //admin screen with all option(6)
 void userscreen();
 void user(int ch);
 void adm(int ch);
@@ -149,7 +149,8 @@ class student
   cout<<"ENTER SEX      :                       (enter  .  to retain old one)\n";
   cout<<"ENTER PHONE NO :                       (enter  .  to retain old one)\n";
 		gotoxy(17,16);
-		cin>>nm;
+		cin.ignore();
+        cin.getline(name, sizeof(nm));
 		gotoxy(17,17);
 		cin>>ag;
 		gotoxy(17,18);
@@ -182,10 +183,11 @@ class student
 		cout<<"\n\n\t Enter name \t             :                      (press ! to go back)";
 		gotoxy(39,9);
 
-cin>>name;
+		cin.ignore();
+        cin.getline(name, sizeof(name));
 		if(strcmp(name,"!")==0)
 		{
-		return;
+		adscreen();
 		}
 		cout<<"\t Enter Age                   : ";
 		cin>>age;
@@ -209,15 +211,15 @@ cin>>name;
 			cout<<"         Name                 :";
 			for(int i=0;name[i]!='\0';i++)
 							name[i]=toupper(name[i]);
-							cout<<name<<"\n";
-							cout<<"         Age                  :";
-							cout<<age<<"\n";
-							cout<<"         Sex                  :";
-							cout<<sex<<"\n";
-							cout<<"         Phone                :";
-							cout<<phone<<"\n";
-						cout<<"_______________________________________________________________________________\n";
-						cout<<"_______________________________________________________________________________\n";
+            cout<<name<<"\n";
+			cout<<"         Age                  :";
+			cout<<age<<"\n";
+			cout<<"         Sex                  :";
+			cout<<sex<<"\n";
+			cout<<"         Phone                :";
+			cout<<phone<<"\n";
+            cout<<"_______________________________________________________________________________\n";
+            cout<<"_______________________________________________________________________________\n";
 }
 
 							void screen1()
@@ -264,15 +266,15 @@ cin>>name;
 	cin>>user;
 	cout<<"\n\n";
 	gotoxy(41,13);
-	for(int i=0;i<8;i++)
+	for(int i=0;i<9;i++)
 	{
 		c[i]=getch();
 		cout<<"*";
 	}
-	c[8]='\0';
+	c[9]='\0';
 	getch();
 
-if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"password")==0))
+if(((strcmp(user,"user")==0)||(strcmp(user,"USER")==0))&&(strcmp(c,"narikodan")==0))
 	{system("cls");
 		// clrscr();
 		sc();
@@ -289,8 +291,8 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 		gotoxy(25,13);
 
 		cout<<"Oops!!! ADMINISTRATION NOT RESPONDING\n\t\t\t (user name is wrong!!!!!)";
-		getch();
-		screen1();
+		getch();system("cls");
+		pass();
 
 	}
 	else if(strcmp(c,"password")!=0)
@@ -301,8 +303,8 @@ if(((strcmp(user,"narikul")==0)||(strcmp(user,"NARIKUL")==0))&&(strcmp(c,"passwo
 		gotoxy(25,13);
 
 		cout<<"Oops!!! ADMINISTRATION NOT RESPONDING\n\t\t\t (password is wrong!!!!!)";
-		getch();
-		screen1();
+		getch();system("cls");
+		pass();
 	}
 }
 								void sc()
@@ -562,7 +564,6 @@ else
   }
  }
 }
-
 ```
 
 
