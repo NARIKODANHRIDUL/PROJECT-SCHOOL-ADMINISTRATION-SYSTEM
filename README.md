@@ -7,6 +7,12 @@ The project was developed with the sum of solving the problem of maintaining the
 
 ---
 
+## DEMO VIDEO
+<video controls autoplay muted loop src="demoVideo.mp4">
+Your browser doesn't support this file format :) </video>
+
+---
+
 ## EXISTING SYSTEM :
 The details of students are manually entered into the booklet
 ##### Limitations of current system:
@@ -583,3 +589,4 @@ else
 ![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/15-6.PNG)
 ![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/16-backed.PNG)
 ![](https://github.com/NARIKODANHRIDUL/PROJECT-SCHOOL-ADMINISTRATION-SYSTEM/blob/master/photos/17-exit.PNG)
+
