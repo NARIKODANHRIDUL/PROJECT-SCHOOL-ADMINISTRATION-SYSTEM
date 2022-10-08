@@ -85,7 +85,7 @@ class student
   cout<<"ENTER PHONE NO :                       (enter  .  to retain old one)\n";
 		gotoxy(17,16);
 		cin.ignore();
-        cin.getline(name, sizeof(nm));
+        cin.getline(nm, sizeof(nm));
 		gotoxy(17,17);
 		cin>>ag;
 		gotoxy(17,18);
@@ -218,7 +218,7 @@ if(((strcmp(user,"user")==0)||(strcmp(user,"USER")==0))&&(strcmp(c,"narikodan")=
 		cout<<"WELCOME";
 		for(x=0;x<1;x++);
 	}
-	else if((strcmp(user,"narikul")!=0)&&(strcmp(user,"NARIKUL")!=0))
+	else if((strcmp(user,"user")!=0)&&(strcmp(user,"USER")!=0))
 	{
 		system("cls");
 		// clrscr();
@@ -230,7 +230,7 @@ if(((strcmp(user,"user")==0)||(strcmp(user,"USER")==0))&&(strcmp(c,"narikodan")=
 		pass();
 
 	}
-	else if(strcmp(c,"password")!=0)
+	else if(strcmp(c,"narikodan")!=0)
 	{
 		system("cls");
 			// clrscr();
@@ -300,7 +300,7 @@ if(((strcmp(user,"user")==0)||(strcmp(user,"USER")==0))&&(strcmp(c,"narikodan")=
 				 break;
 		case '6':screen1();
 				 break;
-		default:cout<<"So Sorry!!!Unknown Choice\n TRY AGAIN....";
+		default:cout<<"So Sorry!!!Unknown Choice\n TRY AGAIN....";
   }
 }
 									void add_data()
@@ -362,7 +362,7 @@ if(((strcmp(user,"user")==0)||(strcmp(user,"USER")==0))&&(strcmp(c,"narikodan")=
 		// clrscr();
 		sc();
 		gotoxy(28,13);
-		cout<<"Oops!!Record not found!!";
+		cout<<"Oops!!Record not found!!";
 		gotoxy(25,20);
 		cout<<"press any key to go back!!!!!!!";
   }
@@ -405,7 +405,7 @@ if(((strcmp(user,"user")==0)||(strcmp(user,"USER")==0))&&(strcmp(c,"narikodan")=
 		// clrscr();
 		sc();
 		gotoxy(28,13);
-		cout<<"Oops!!Record not found!!";
+		cout<<"Oops!!Record not found!!";
 		gotoxy(25,20);
 		cout<<"press any key to go back!!!!!!!";
   }
